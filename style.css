@@ -39,19 +39,25 @@ body,
   width: 75px;
   position: absolute;
   transform-origin: bottom;
+  transition: transform 250ms ease-in-out;
 }
 .icon-container .center {
   z-index: 2;
 }
 .icon-container .right,
 .icon-container .left {
-    
+  filter: grayscale(0.5);
+  transform: scale(0.9);
 }
-.icon-container .right {
+.dragged .icon-container .right {
   transform: rotate(10deg) translateX(20px) scale(0.9);
   transform-origin: bottom;
+
 }
-.icon-container .left {
+.dragged .icon-container .left {
   transform: rotate(-10deg) translateX(-20px) scale(0.9);
   transform-origin: bottom;
+}
+.dragged .icon-container .center{
+    transform: translateY(-5px);
 }
